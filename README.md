@@ -7,9 +7,6 @@
 본 프로젝트는 인간의 피드백을 이용하여 보상 함수를 fine-tuning하는 RLHF(Reinforcement Learning with Human Feedback)를 통해 기존 강화학습 방식에서 발생하는 보상 함수 설계의 문제를 해결하고자 한다. 이를 통해 강화학습 기반의 high-dimension 환경에서 Agent가 보다 유연하게 작동할 수 있도록 하는 것이 목표이다.
 
 ## 팀원 구성
-
-<div align="center">
-  
 | **권은주** | **진현석** | **조현진** |
 | :------: |  :------: | :------: |
 </div>
