@@ -1,0 +1,52 @@
+David Silver 'Reinforcement Learning' 1~4강
+
+Lecture 1 : Introduction to Reinforcement Learning
+-강화학습과 다른 머신러닝의 차이점
+1.답을 알려주는것이 아닌, 오직 reward받는것을 최대로 해봐라. 즉, 지도자 없이 스스로 해내는 것.
+2.피드백이 즉각적이지 않다.
+3.시간이 매우 중요하다.
+4.받는 데이터가 계속 달라지며 어떻게 받는냐가 중요하다.
+
+-중요한 용어
+reward: agent가 어떤 행동을 취했을 때 받는 피드백 신호, Value Function: 현재 상태 좋고 나쁨 평가
+environment state = S(et): agent는 모름, 내부적 필요한 정보, agent state = S(at): action에 필요한 정보들
+Markov state = 바로 직전의 state만 참고, environment state = Markov state
+Exploration: 정보를 찾는것, Exploitation: 최선의 선택 ⇒ 두 관계는 trade off 
+
+Lecture 2: Markov Decision Processes
+-중요한 용어
+Markov Process: 미래의 상태가 오직 현재 상태에만 의존한다.
+                상태 전이 확률 P(s',s)는 현재 상태 s에서 다음 상태 s'로 전이될 확률
+Markov Reward Process: Markov Process에서 보상개념(R)을 추가한 것.
+                       R: reward function(상태 전이 시 받을 수 있는 보상) 
+                       γ: discount factor(미래의 보상을 현재 가치로 환산), 범위는 0~1
+Markov Decision Process: Markov Reward Process에서 행동(Action)의 개념을 추가한 것
+                         전이 확률(P): P(s', r|s, a)는 현재 상태(s)에서 행동(a)을 취했을 때, 다음 상태(s')로 전이되며 보상(r)을 받을 확률
+                         보상(R): R(s,a,s')는 상태(s)에서 행동(a)을 취해 상태(s')로 이동할 때 받게 되는 보상
+Bellman Expectation Equation: 상태(s)에서 행동(a)를 취한 후 π를 따라서 게임을 끝까지 하면 얻을 return의 기대값
+
+Lecture 3: Planning by Dynamic Programming
+-중요한 용어-
+Planning: MDP에 대한 모든 정보를 알때(=Environment) 더 나은 policy를 찾는 과정
+Dynamic Programming: 복잡한 문제를 푸는 방법(큰 문제를 작은 문제로 나누고 해결책을 찾아서 모은다.)
+
+-Planning by Dynamic Programming의 2가지 문제-
+1. For prediction: value function을 학습하는 것, MDP가 있고 policy가 있을 때 그 policy를 따를 경우의 value function
+2. For control: optimal policy를 찾는 것, MDP만 있고 optimal policy를 찾음
+
+Lecture 4: Model-Free Prediction
+-중요한 용어-
+Monte-Carlo Reinforcement Learning(MC): 직접 구하기 어려운 것을 episode을 돌리면서 추정하는 것.
+                                        model-free 문제에서 사용(MDP의 transition, reward를 모를 때)
+                                        episode가 끝나야 return(reward들의 cumulative sum)을 알 수 있다.
+Temporal-Difference Learning(TD): 경험으로부터 직접적으로 배우는것, MDP에 대한 지식이 필요 없음.
+First-Visit Monte-Carlo Policy Evaluation: episode에서 특정 state를 처음 방문했을때 Counter를 증가
+Every-Visit Monte-Carlo Policy Evaluation: state를 방문할때마다 Counter를 증가
+Bootstrapping: 추측치로 추측치를 업데이트 하는 것. DP, TD가 사용, MC는 사용 X
+Sampling: 하나의 샘플을 가지고 업데이트를 하는 것. 
+
+-MC vs TD
+1.TD는 최종 결과가 나오기 전까지 학습 가능(every step마다 실시간으로 배운다.)
+2.MC는 episode 하나가 완전히 끝나서 return을 알기 전까지 기다려야한다.
+3.TD는 final outcome이 없어도 학습 가능하다. 반면 MC는 완벽한 결과로부터만 배운다.
+4.TD는 non-terminating 환경에서도 작동한다. MC는 terminating 환경에서만 작동한다.
