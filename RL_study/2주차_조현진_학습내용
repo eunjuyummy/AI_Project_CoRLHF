@@ -1,0 +1,31 @@
+2주차 학습 내용. David Silver 의 Reinforcement learning 1~4주차.
+
+Lecture 1: 강화학습에 대한 intro로 observation, action, reward, env, state, policy에 대한 개념들을 정리.
+
+
+Lecture 2: 중요한 개념 오직 Markov S(t)에만 의존하고 이전 상태들의 히스토리에는 관심이 없는 성질
+Markov Processes, Markov Reward Processes 그리고 Markov Decision Processes 등의 여러 정의에 대해서 학습
+각각에 대한 미묘한 차이에 느낌은 잡았으나 각각의 수식에 대해서는 정확히 이해하지 못했음.
+
+
+Lecture 3: Planning by Dynamic Programming
+(MDP)를 모두 다 알고 있을 때 사용되며 실제 사용되는 경우는 소수이다.
+Dynamic Programming: 큰 문제를 작은 문제로 나누고 해결책을 찾아 모두 합친다(Divide conquer와 비슷)
+* 푼다 = 최적의 Policy를 찾는다
+
+Dynamic Programming은 Prediction과 Control 나누어진다
+
+
+Lecture 4: Model-Free Prediction
+Model-Free: MDP를 모르는 상태에서 Agent가 env에 던져졌을 때 사용
+Prediction: Policy가 정해졌을 때 끝날 상황의 return을 예측하여 Value를 찾는 문제
+
+env를 모르는 상태에서 model free를 풀려면 2가지 방법 Monte Carlo(MC)와 Temporal-Difference(TD)가 있다.
+
+MC = 실제로 구하기 어려울 때 직접 해봄으로서 추정하는 것.
+ex) Policy를 알고 있기에 env에서 반복하여 움직여보고 return을 평균
+단점. 에피소드가 끝나야만 return을 알 수 있다.
+
+TD = 예측치로 예측치를 업데이트. 한 스텝 더 간 추측값으로 현재값을 업데이트한다.
+연속된 상황에서도 update가 가능
+
