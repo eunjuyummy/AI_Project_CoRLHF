@@ -15,9 +15,16 @@
 - policy, value function, model
 
 [Lecture 2]
+- MDP
+  state, action, reward, state transition matrix, discount factor
 
+- Policy
+  state-value function
+  action-value function
 
-
+- Bellman Equation
+  Bellman Expectation Equation
+  Bellman Optimally Equation
 
 [Lecture 3]
 
