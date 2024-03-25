@@ -1,0 +1,28 @@
+[Lecture 1]
+- Reward
+  scalar feedback signal
+  To maximise cumulative reward
+  scalar
+  * reinforcement learning is based on the reward hypothesis
+
+- History and state
+  Agent의 state, environment의 state
+
+- Markov state
+  MDP -> fullly obervable
+  POMDP -> partially observable
+
+- policy, value function, model
+
+[Lecture 2]
+
+
+
+
+[Lecture 3]
+
+
+
+
+
+[Lecture 4]
