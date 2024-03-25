@@ -27,9 +27,44 @@
   Bellman Optimally Equation
 
 [Lecture 3]
+- Planning -> model-based
+- Reinforcement Learning -> model-based
+planning
+-> Dynamic Programming, Monte Carlo Methods, Temporal-difference learning
+* DP는 planning의 한 방법 MDP 문제에서 environment의 모델을 완벽하게 안다는 전제하에 Optimal Policies 연산하는데 쓰이는 (Bellman Equation) 알고리즘의 총체
 
+- Policy iteration
+  prediction: 현재 optimal하지 않은 policy에 대해 value function을 구한다.
+  control: 현재 value function을 토대로 더 나은 policy를 구한다.
 
+- policy evaluation
+  policy를 따라갔을 때, Return을 얼마나 받는지 알면 된다.
+  -> value function을 알면 된다. -> synchronous backups
+  problem: evalueate a give policy 
+  solution: iterative application of Bellman expectation back up
+* 최종적으로 우리가 찾고자 하는 것은 각 state들의 true value function
 
+- true value function
+  -> 전체 MDP의 모든 state에 대해 동시에 한 번씩 Bellman Equation을 계산해서 update k를 한 단계 올린다.
 
+--> DP의 계산량은 과도하게 많으며, 정의상 model을 알아야 풀 수 있기 때문에, DP의 단점은 꽤나 극명한 편이다.
+    -> RL로 보완하려는게 현재의 흐름
+
+- policy improvement
+  true value function -> optimal policy
 
 [Lecture 4]
+- MC
+  학습이 끝나고 return 값이 나올 때까지 기다림
+  first visit
+  every visit
+
+- TD 
+  final outcome이 나오기 전에 학습 가능
+
+- bias/variance trade off
+
+- DP, MC, TD
+  MC는 어느 한가지를 끝까지 한 다음 이 값으로 St를 update
+  TD는 한 step만 가보고, 그 상태에서 추측해서 update = bootstrapping
+  DP는 Sampling, 그 칸에서 할 수 있는 모든 actions에 대해서 한 step 가보고, 그 칸에 적혀 있는 value로 full-width update
