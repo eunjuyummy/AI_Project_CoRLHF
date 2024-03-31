@@ -1,1 +1,6 @@
-lecture
+lecture 5 
+중요한 용어
+-On policy learning
+학습하는 policy와 행동하는 policy가 같은 경우 ex)Sarsa
+-Off policy learning
+학습하는 policy와 행동하는 policy가 반드시 같지 않아도 된다 ex)Q-learning
