@@ -1,6 +1,37 @@
-lecture 5 
-중요한 용어
--On policy learning
-학습하는 policy와 행동하는 policy가 같은 경우 ex)Sarsa
--Off policy learning
-학습하는 policy와 행동하는 policy가 반드시 같지 않아도 된다 ex)Q-learning
+lecture 5 Model-Free Control
+-중요한 용어
+Model Free
+:MDP에 대한 정보가 없는 경우, 즉 environment에 대한 정보 X
+Contrl:
+value function을 최적화 하는 것, 즉 최적의 정책을 찾는 것
+On policy learning
+:학습하는 policy와 행동하는 policy가 같은 경우 ex)Sarsa
+Off policy learning
+:학습하는 policy와 행동하는 policy가 반드시 같지 않아도 된다 ex)Q-learning
+Q-learning
+importance learning을 하지 않으면서 off-policy를 사용하기 위한 방법
+
+-value function을 estimate하는 방법들을 E 단계에 적용해보면 3가지 문제 발생
+1.Model-based
+MC로 E단계를 수행하면 state value funcion을 사용해야한다. 하지만 value funcion을 사용하면 M단계를 진행할 때 문제가 발생한다.
+MC를 사용했던 이유가 Model-Free이기 때문이지만 policy를 improve하려면 MDP의 model을 알아야한다.
+즉 reward와 state transition probalitiy를 알아야한다.(Model-based이어야 한다는 것)
+해결 방법: value function을 action value function을 바꿔야한다.
+2.Local optimum
+탐험과 탐사가 trade-off에 빠지게 될 수 있다.
+해결방법: policy를 최적화 할때 일정한 확률을 부여해서 정하도록 한다.
+3.Inefficiency of policy evaluation
+모든 episode들을 다 마친 후에 evaluation을 하면 오랜 시간이 걸린다는 단점이 존재한다.
+해결방법: 매 episode들이 끝난 후에 policy evaluation을 수행하는 것으로 바꾼다.
+
+RLIF 논문 리뷰
+DAgger와 같은 상호작용 모방 학습 방법은 온라인 상에서 근접 최적 전문가에게 개입을 요청하여 수정 데이터를 수집함으로써, 순진한 행동 복제를 괴롭히는 분포적 변화입니다.
+RLIF는 강화학습과 이런 모방학습을 결합한 방법으로 RL의 보상을 극대화하는 행동, 즉 가능한 최고의 인간 행동을 개선할 수 있는 것과 상호작용 모방 학습의 접근 가능한 가정을 결합하는 것으로 
+보상 함수에 대한 접근을 요구하지 않고 대신 전문가의 개입 결정으로부터 보상 신호를 유도합니다.
+RLIF는 전문가가 개입하지 않는 모든 전환에 대해 보상은 단순히 0으로 설정되며, 전문가가 개입하는 이전 전환에 대해서는 -1로 설정합니다.
+
+RLIF와 DAgger의 성능차이:RLIF는 가치 기반 개입을 사용하여 좋은 성능에 도달할 수 있으며 에이전트가 개선됨에 따라 가치 기반 개입률이 감소하는 것을 보여줍니다.
+RLIF는 모든 작업에 걸쳐 DAgger와 HG-DAgger를 일관되게 능가하며, 전문가가 더 부적합할 때 성능 차이가 더 두드러지며, 최대 5배까지 클 수 있습니다.
+
+RLIF 논문 읽고 느낀점
+논문에서 전반적으로 말하고자 하는 것은 알겠지만 중간 중간 이해하고 넘어가기엔 어려운 개념과 식이 여럿있었다.
