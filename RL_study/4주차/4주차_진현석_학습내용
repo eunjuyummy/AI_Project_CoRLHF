@@ -1,4 +1,4 @@
-lecture 5 Model-Free Control
+# lecture 5 Model-Free Control
 -중요한 용어
 Model Free
 :MDP에 대한 정보가 없는 경우, 즉 environment에 대한 정보 X
