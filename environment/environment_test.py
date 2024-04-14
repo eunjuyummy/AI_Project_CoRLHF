@@ -1,6 +1,5 @@
 import gymnasium as gym
-print(gym.envs.registry.keys())
-#env = gym.make('AdroitHandDoorSparse-v1', render_mode="human")
+#print(gym.envs.registry.keys())
 env = gym.make('AdroitHandPen-v1', render_mode="human")
 observation, info = env.reset(seed=42)
 for _ in range(1000):
