@@ -1,1 +1,7 @@
-
+python3.8 -m RLIF.examples.train_rlif_main \
+    --env_name "pen-expert-v1" \
+    --sparse_env 'AdroitHandPenSparse-v1' \
+    --intervention_strategy '' \
+    --dataset_dir '' \
+    --expert_dir './RLIF/experts/iql_experts/hammer_expert_5_model/trained_model.pkl' \
+    --ground_truth_agent_dir './RLIF/experts/iql_experts/hammer_expert_5_model/trained_model.pkl'
