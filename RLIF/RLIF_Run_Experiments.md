@@ -1,6 +1,6 @@
 # RLIF_Run_Experiments
 ---
-기존의 Run Experiments에 있는 command line 실행 시 오류 발생
+기존의 Run Experiments에 있는 command line 실행 시 오류 발생 <br>
 수정된 command line으로 실행 시 오류 없이 작동함.
 ## Command line
 python3.8 -m RLIF.examples.train_rlif_main \
