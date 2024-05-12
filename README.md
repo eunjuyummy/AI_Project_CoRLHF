@@ -11,7 +11,7 @@
 | :------: |  :------: | :------: |
 </div>
 
-## Page
+## Reference
 [Minari docs](https://minari.farama.org/)
 
 [RLIF: Interactive Imitation Learning as Reinforcement Learning](https://rlif-page.github.io/)
