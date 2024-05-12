@@ -12,7 +12,7 @@
 </div>
 
 ## Page
-https://minari.farama.org/ {Minari docs}
+[Minari docs](https://minari.farama.org/)
 
 ## 프로젝트 기간 및 작업 관리
 
