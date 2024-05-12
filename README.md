@@ -13,10 +13,10 @@
 
 ## Page
 [Minari docs](https://minari.farama.org/)
-
+[RLIF: Interactive Imitation Learning as Reinforcement Learning] https://rlif-page.github.io/
 ## 프로젝트 기간 및 작업 관리
 
-### 프로젝트 기간
+### 프로젝트 기간 
 
 - 전체 프로젝트 기간 : 2024-03-02 ~ 2024-12-31
 - 강화학습 스터디:
