@@ -6,10 +6,8 @@
 ## 프로젝트의 목표
  본 프로젝트는 인간의 피드백을 이용하여 보상 함수를 fine-tuning하는 RLHF(Reinforcement Learning with Human Feedback)를 통해 기존 강화학습 방식에서 발생하는 보상 함수 설계의 문제를 해결하고자 한다. 이를 통해 강화학습 기반의 high-dimension 환경에서 Agent가 보다 유연하게 작동할 수 있도록 하는 것이 목표이다.
 
-## Reference
-[Minari docs](https://minari.farama.org/)
+![Screenshot from 2024-05-12 18-51-03](https://github.com/eunjuyummy/AI_Project_CoRLHF/assets/101487529/b5eb5648-da00-4ba1-9ef6-51bec5759d5c)
 
-[RLIF: Interactive Imitation Learning as Reinforcement Learning](https://rlif-page.github.io/)
 ## 프로젝트 기간 및 작업 관리
 
 ### 프로젝트 기간 
@@ -18,5 +16,10 @@
 - 강화학습 스터디:
 - RLIF 구현 : 
 - RLHF 구현 : 
+
+## Reference
+[Minari docs](https://minari.farama.org/)
+
+[RLIF: Interactive Imitation Learning as Reinforcement Learning](https://rlif-page.github.io/)
 
 <br>
