@@ -13,7 +13,8 @@
 
 ## Page
 [Minari docs](https://minari.farama.org/)
-[RLIF: Interactive Imitation Learning as Reinforcement Learning]https://rlif-page.github.io/
+
+[RLIF: Interactive Imitation Learning as Reinforcement Learning](https://rlif-page.github.io/)
 ## 프로젝트 기간 및 작업 관리
 
 ### 프로젝트 기간 
