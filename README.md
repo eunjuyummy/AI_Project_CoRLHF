@@ -11,6 +11,9 @@
 | :------: |  :------: | :------: |
 </div>
 
+## Page
+https://minari.farama.org/{Minari docs}
+
 ## 프로젝트 기간 및 작업 관리
 
 ### 프로젝트 기간
