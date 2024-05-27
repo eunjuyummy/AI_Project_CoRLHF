@@ -11,15 +11,6 @@ RLHF기반 로봇 팔 제어 프로그램 개발
 ## Demonstration
 ![Screenshot from 2024-05-12 18-51-03](https://github.com/eunjuyummy/AI_Project_CoRLHF/assets/101487529/b5eb5648-da00-4ba1-9ef6-51bec5759d5c)
 
-## 프로젝트 기간 및 작업 관리
-
-### 프로젝트 기간 
-
-- 전체 프로젝트 기간 : 2024-03-02 ~ 2024-12-31
-- 강화학습 스터디:
-- RLIF 구현 : 
-- RLHF 구현 : 
-
 ## Reference
 [Minari docs](https://minari.farama.org/)
 
