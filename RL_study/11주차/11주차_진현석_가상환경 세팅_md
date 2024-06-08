@@ -1,0 +1,15 @@
+# Environments 세팅
+## WSL ubuntu 설치
+- Anaconda 가상환경 설치
+- python 버전 3.10설치
+
+## 패키지 설치
+- git을 사용한 Gymnasium, Mujoco, Mujoco-py, Gymnasium-Robotics 설치
+
+## 부가적 세팅
+- Gymnasium/gymnasium/envs/__init__.py에 register_environment.py 코드 추가
+- environment_test.py로 원하는 환경 이름 설정 후 실행
+
+## 에러 사항
+- 단계 마다 여러 에러가 발생
+- GUI오류, 디렉토리 위치, 버전 오류, 환경변수 설정 등 많은 오류로 인해 시간 소비
