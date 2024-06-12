@@ -395,7 +395,7 @@ def main(_):
                 with open(os.path.join(model_dir, "model.pkl"), 'wb') as fout:
                     pickle.dump(save_data, fout)
             
-            # 환경 생성
+            # ADD: video rendering @eunjuyummy
             video_env = gymnasium.make('AdroitHandPenSparse-v1', render_mode="rgb_array")
             video_env = RecordVideo(video_env, "results_video", episode_trigger=lambda e: True)
 
