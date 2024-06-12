@@ -441,41 +441,8 @@ def main(_):
                 save_data = {'rlpd': agent}
                 with open(os.path.join(model_dir, "model.pkl"), 'wb') as fout:
                     pickle.dump(save_data, fout)
-            '''
-            frames = [] 
-            for i in range(FLAGS.eval_episodes): 
-                observation, done = eval_env.reset(), False 
-                while not done: 
-                    action = agent.eval_actions(observation) 
-                    observation, _, done, _ = eval_env.step(action) 
-                    frames.append(eval_env.render(mode='rgb_array')) 
-            eval_env.close() 
-            '''
-            '''
-            frames = []
-            for i in range(FLAGS.eval_episodes):
-                observation, done = eval_env.reset(), False
-                while not done:
-                    action = eval_env.predcit(observation)
-                    observation, _, done, _ = eval_env.step(action)
-                    frame = eval_env.render(mode='rgb_array')
-                    if frame is None:
-                        print(f"Error: frame is None at episode {i}")
-                    else:
-                        print(f"Frame at episode {i}, step {len(frames)}: shape={frame.shape}")
-                    frames.append(frame)
-            eval_env.close()
-
-            # 동영상을 저장할 경로 및 파일 이름 지정
-            video_path = 'evaluation_video.mp4'
-            # moviepy를 사용해 프레임을 동영상으로 변환
-            clip = mpy.ImageSequenceClip(frames, fps=30)
-            clip.write_videofile(video_path)
-            print(f"Video saved to {video_path}")
-
-
-            '''
-            # 환경 생성
+            
+            # ADD: video rendering @eunjuyummy
             video_env = gymnasium.make('AdroitHandPenSparse-v1', render_mode="rgb_array")
             video_env = RecordVideo(video_env, "results_video", episode_trigger=lambda e: True)
 
